@@ -5,14 +5,14 @@
 </div>
 
 
-<div align="center">
+<div>
 
 
 ### `☾ Who Am I?`
 
 ─────────────────────────────────────────
 
-A mobile developer who genuinely loves what she builds.
+A passionate developer who genuinely loves what she builds.
 
 I get excited learning something new every single day —
 
@@ -41,7 +41,7 @@ Always expanding, never settling for "good enough".
   </a>
 </p>
 
-![Frameworks & Libraries](https://img.shields.io/badge/Frameworks&Libraries-fdb1be?style=for-the-badge&logoColor=30191e)
+![Frameworks & Libraries](https://img.shields.io/badge/Frameworks%20&%20Libraries-fdb1be?style=for-the-badge&logoColor=30191e)
 
 <p>
   <a href="https://skillicons.dev">
@@ -57,7 +57,7 @@ Always expanding, never settling for "good enough".
   </a>
 </p>
 
-![Design & Tools](https://img.shields.io/badge/Design&Tools-fdb1be?style=for-the-badge&logoColor=30191e)
+![Design & Tools](https://img.shields.io/badge/Design%20&%20Tools-fdb1be?style=for-the-badge&logoColor=30191e)
 
 <p>
   <a href="https://skillicons.dev">
@@ -95,7 +95,6 @@ Always expanding, never settling for "good enough".
         ╰───────────────────╯
 ```
 
-[![Telegram](https://img.shields.io/badge/telegram-%23fdb1be.svg?style=flat-square&logo=Telegram&logoColor=30191e)](https://t.me/XxxxLunaxxxX)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=30191e&height=120&section=footer&fontColor=fdb1be" />
 
