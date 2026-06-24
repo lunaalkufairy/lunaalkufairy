@@ -87,7 +87,6 @@ Always expanding, never settling for "good enough".
 
 <div align="center">
 
-
 <br>
 
 ```
