@@ -4,15 +4,11 @@
 
 </div>
 
-<div align="center">
-
-`✦ · · ✦ · · ✦ · · ✦ · · ✦ · · ✦`
-
-</div>
 
 <div align="center">
 
-### `☾  Who Am I?`
+
+### `☾ Who Am I?`
 
 ─────────────────────────────────────────
 
@@ -24,7 +20,7 @@ Curiosity isn't a phase for me, it's how I'm wired.
 
 Always expanding, never settling for "good enough".
 
-4th Year · Computer Engineering · Software Engineering · University of Damascus.
+4th Year · Software Engineering · University of Damascus.
 
 ─────────────────────────────────────────
 
@@ -89,13 +85,8 @@ Always expanding, never settling for "good enough".
 
 </div>
 
-<br>
-
-<br>
-
 <div align="center">
 
-`✦ · · ✦ · · ✦ · · ✦ · · ✦ · · ✦`
 
 <br>
 
