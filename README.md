@@ -10,8 +10,6 @@
 
 </div>
 
-<br>
-
 <div align="center">
 
 ### `☾  Who Am I?`
@@ -34,25 +32,10 @@ Always expanding, never settling for "good enough".
 
 <br>
 
-<div align="center">
-
-### `⟡ moon phases — my projects`
-
-| phase | project | status | stack |
-|:-----:|---------|--------|-------|
-| 🌕 | [**waslny driver**](https://github.com/lunaalkufairy/waslny_driver) — ride-sharing driver app | deployed | Flutter · GetX · Maps |
-| 🌕 | [**waslny rider**](https://github.com/lunaalkufairy/waslny_rider) — ride-sharing rider app | deployed | Flutter · GetX · Pusher |
-| 🌔 | [**delivery app**](https://github.com/lunaalkufairy/delivery_app) — delivery platform | refining | Flutter · Dart |
-| 🌕 | [**weather app**](https://github.com/lunaalkufairy/weather_app) — city weather lookup | deployed | Flutter · API |
-| 🌕 | [**counter app**](https://github.com/lunaalkufairy/counter_app) — custom BLoC counter | deployed | Flutter · BLoC |
-
-</div>
-
-<br>
-
 <div>
 
 ### `⟡ Tech Stack`
+---
 
 ![Languages](https://img.shields.io/badge/Languages-fdb1be?style=for-the-badge&logoColor=30191e)
 
@@ -118,12 +101,11 @@ Always expanding, never settling for "good enough".
 
 ```
         ╭───────────────────╮
-        │  ☾ lunaalkufairy ☽│
+        │ ☾ lunaalkufairy ☽ │
         ╰───────────────────╯
 ```
 
 [![Telegram](https://img.shields.io/badge/telegram-%23fdb1be.svg?style=flat-square&logo=Telegram&logoColor=30191e)](https://t.me/XxxxLunaxxxX)
-![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=lunaalkufairy.lunaalkufairy&left_color=30191e&right_color=fdb1be&left_text=visitors)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=30191e&height=120&section=footer&fontColor=fdb1be" />
 
