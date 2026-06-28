@@ -5,6 +5,27 @@
   fontFamily:'Inter', position:'relative', overflow:'hidden',
   borderRadius:16,
 }}>
+  <div style={{display:'flex',flexDirection:'column',gap:8,padding:20,zIndex:10,overflow:'hidden'}}>
+    <div style={{display:'flex',fontSize:10,color:'#d99d87'}}>totalStars: {String(github?.totalStars ?? 'undefined')}</div>
+    <div style={{display:'flex',fontSize:10,color:'#d99d87'}}>publicRepos: {String(github?.user?.publicRepos ?? 'undefined')}</div>
+    <div style={{display:'flex',fontSize:10,color:'#d99d87'}}>followers: {String(github?.user?.followers ?? github?.user?.followers?.totalCount ?? 'undefined')}</div>
+    <div style={{display:'flex',fontSize:10,color:'#d99d87'}}>repos.length: {String(github?.repos?.length ?? 'undefined')}</div>
+    <div style={{display:'flex',fontSize:10,color:'#999189'}}>lang[0]: {JSON.stringify(github?.languages?.[0] ?? 'undefined')}</div>
+    <div style={{display:'flex',fontSize:10,color:'#999189'}}>lang[1]: {JSON.stringify(github?.languages?.[1] ?? 'undefined')}</div>
+    <div style={{display:'flex',fontSize:10,color:'#999189'}}>lang[2]: {JSON.stringify(github?.languages?.[2] ?? 'undefined')}</div>
+    <div style={{display:'flex',fontSize:10,color:'#7b6261'}}>github keys: {Object.keys(github ?? {}).join(', ')}</div>
+    <div style={{display:'flex',fontSize:10,color:'#7b6261'}}>user keys: {Object.keys(github?.user ?? {}).join(', ')}</div>
+  </div>
+</div>
+```
+
+```aura width=860 height=220
+<div style={{
+  width:'100%', height:'100%', background:'#0d0810',
+  display:'flex', alignItems:'center', justifyContent:'center',
+  fontFamily:'Inter', position:'relative', overflow:'hidden',
+  borderRadius:16, 
+}}>
   <style>{`
     @keyframes d1 { 0%,100%{transform:translateX(0);opacity:.85} 50%{transform:translateX(280px);opacity:1} }
     @keyframes d2 { 0%,100%{transform:translateX(0);opacity:.7} 50%{transform:translateX(-220px);opacity:.95} }
@@ -47,7 +68,7 @@
   width:'100%', height:'100%', background:'#0d0810',
   display:'flex', alignItems:'center', justifyContent:'center',
   fontFamily:'Inter', position:'relative', overflow:'hidden',
-  borderRadius:16,
+  borderRadius:16, 
 }}>
   <style>{`
     @keyframes a1 { 0%,100%{transform:translateX(0);opacity:.6} 50%{transform:translateX(200px);opacity:.9} }
@@ -82,7 +103,7 @@
   width:'100%', height:'100%', background:'#0d0810',
   display:'flex', alignItems:'center', justifyContent:'center',
   fontFamily:'Inter', position:'relative', overflow:'hidden',
-  borderRadius:16,
+  borderRadius:16, 
 }}>
   <style>{`
     @keyframes t1 { 0%,100%{transform:translateX(0);opacity:.65} 50%{transform:translateX(240px);opacity:.9} }
@@ -137,7 +158,7 @@
   width:'100%', height:'100%', background:'#0d0810',
   display:'flex', alignItems:'center', justifyContent:'center',
   fontFamily:'Inter', position:'relative', overflow:'hidden',
-  borderRadius:16,
+  borderRadius:16, 
 }}>
   <style>{`
     @keyframes s1 { 0%,100%{transform:translateX(0);opacity:.6} 50%{transform:translateX(220px);opacity:.85} }
