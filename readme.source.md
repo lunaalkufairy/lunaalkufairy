@@ -37,7 +37,7 @@
   <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:10,zIndex:10}}>
     <div id="ht" style={{display:'flex',fontSize:38,fontWeight:800,color:'#d99d87',letterSpacing:'2px',lineHeight:1}}>Luna Alkufairy</div>
     <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.9)',letterSpacing:'2px'}}>Software Engineer &nbsp;|&nbsp; Flutter Developer</div>
-    <div style={{display:'flex',fontSize:12,marginTop:2,color:'rgba(217,157,135,0.6)',letterSpacing:'1px'}}>Crafting cross-platform mobile apps · Open to Freelance &amp; Internships</div>
+    <div style={{display:'flex',fontSize:12,marginTop:2,color:'rgba(217,157,135,0.6)',letterSpacing:'1px'}}>Crafting Cross-Platform Mobile Apps · Open to Freelance &amp; Internships</div>
   </div>
 </div>
 ```
@@ -107,7 +107,7 @@
       {label:'Frameworks', items:['Flutter','GetX','BLoC','Dio']},
       {label:'Databases', items:['Firebase','SQLite']},
       {label:'Design & Tools', items:['GitHub','Git','VS Code','Visual Studio','Figma','Postman']},
-      {label:'Workspace', items:['Windows']},
+      {label:'Workspaces', items:['Windows']},
     ].map(function(row, i) {
       return (
         <div key={i} style={{display:'flex',alignItems:'center',gap:16,width:'100%'}}>
@@ -155,11 +155,36 @@
     <ellipse id="sb2" cx="680" cy="250" rx="270" ry="150" fill="url(#sg2)"/>
     <ellipse id="sb3" cx="430" cy="130" rx="180" ry="100" fill="url(#sg3)"/>
   </svg>
-  <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:16,zIndex:10,width:'100%',padding:'0 40px'}}>
+  <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:20,zIndex:10,width:'100%',padding:'0 50px'}}>
     <div style={{display:'flex',fontSize:11,color:'rgba(217,157,135,0.5)',letterSpacing:'4px'}}>— GITHUB STATS —</div>
-    <div style={{display:'flex',gap:20,alignItems:'center',justifyContent:'center',width:'100%'}}>
-      <img src="https://github-readme-stats.vercel.app/api?username=lunaalkufairy&show_icons=true&bg_color=00000000&title_color=d99d87&text_color=999189&icon_color=7b6261&border_color=44212800&hide_border=true&border_radius=10" width="400" height="180"/>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lunaalkufairy&layout=compact&bg_color=00000000&title_color=d99d87&text_color=999189&border_color=44212800&hide_border=true&border_radius=10&langs_count=5" width="340" height="180"/>
+    <div style={{display:'flex',gap:30,justifyContent:'center',width:'100%'}}>
+      {[
+        {label:'Repositories', value: github?.user?.repositories?.totalCount ?? github?.user?.publicRepos ?? '—'},
+        {label:'Followers',    value: github?.user?.followers?.totalCount ?? github?.user?.followers ?? '—'},
+        {label:'Following',    value: github?.user?.following?.totalCount ?? github?.user?.following ?? '—'},
+        {label:'Stars',        value: github?.user?.starredRepositories?.totalCount ?? '—'},
+      ].map(function(stat, i) {
+        return (
+          <div key={i} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:6}}>
+            <div style={{display:'flex',fontSize:28,fontWeight:800,color:'#d99d87',letterSpacing:'1px'}}>{stat.value}</div>
+            <div style={{display:'flex',fontSize:10,color:'rgba(123,98,97,0.7)',letterSpacing:'2px',textTransform:'uppercase'}}>{stat.label}</div>
+          </div>
+        );
+      })}
+    </div>
+    <div style={{display:'flex',width:'80%',height:1,background:'rgba(68,33,40,0.6)'}}/>
+    <div style={{display:'flex',flexDirection:'column',gap:10,width:'70%'}}>
+      {((github?.languages ?? []).slice(0,5)).map(function(lang, i) {
+        return (
+          <div key={i} style={{display:'flex',alignItems:'center',gap:12}}>
+            <div style={{display:'flex',fontSize:11,color:'rgba(153,145,137,0.8)',minWidth:70,letterSpacing:'1px'}}>{lang.name}</div>
+            <div style={{display:'flex',flex:1,height:4,background:'rgba(68,33,40,0.5)',borderRadius:2}}>
+              <div style={{display:'flex',width:(lang.percent ?? 0)+'%',height:'100%',background:'#d99d87',borderRadius:2,opacity:0.7}}/>
+            </div>
+            <div style={{display:'flex',fontSize:10,color:'rgba(123,98,97,0.7)',minWidth:35,justifyContent:'flex-end'}}>{Math.round(lang.percent ?? 0)}%</div>
+          </div>
+        );
+      })}
     </div>
   </div>
 </div>
