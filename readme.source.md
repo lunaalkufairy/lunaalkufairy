@@ -159,10 +159,10 @@
     <div style={{display:'flex',fontSize:11,color:'rgba(217,157,135,0.5)',letterSpacing:'4px'}}>— GITHUB STATS —</div>
     <div style={{display:'flex',gap:30,justifyContent:'center',width:'100%'}}>
       {[
-        {label:'Repositories', value: github?.user?.publicRepos ?? github?.user?.repositories?.totalCount ?? '—'},
+        {label:'Repositories', value: github?.repos?.length ?? github?.user?.publicRepos ?? github?.user?.repositories?.totalCount ?? '—'},
         {label:'Followers',    value: github?.user?.followers?.totalCount ?? github?.user?.followers ?? '—'},
         {label:'Following',    value: github?.user?.following?.totalCount ?? github?.user?.following ?? '—'},
-        {label:'Stars',        value: github?.user?.starredRepositories?.totalCount ?? github?.totalStars ?? '—'},
+        {label:'Stars',        value: github?.totalStars ?? github?.user?.starredRepositories?.totalCount ?? '—'},
       ].map(function(stat, i) {
         return (
           <div key={i} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:6}}>
@@ -176,9 +176,10 @@
     <div style={{display:'flex',flexDirection:'column',gap:10,width:'70%'}}>
       {(function() {
         var langs = (github?.languages ?? []).slice(0, 5);
-        var total = langs.reduce(function(s, l) { return s + (l.size ?? 1); }, 0);
+        var total = langs.reduce(function(s, l) { return s + (parseInt(l.size) || parseInt(l.bytes) || 1); }, 0);
         return langs.map(function(lang, i) {
-          var pct = total > 0 ? Math.round((lang.size ?? 0) / total * 100) : 0;
+          var size = parseInt(lang.size) || parseInt(lang.bytes) || 0;
+          var pct = total > langs.length ? Math.round(size / total * 100) : Math.round(100 / langs.length);
           return (
             <div key={i} style={{display:'flex',alignItems:'center',gap:12}}>
               <div style={{display:'flex',fontSize:11,color:'rgba(153,145,137,0.8)',minWidth:70,letterSpacing:'1px'}}>{lang.name}</div>
