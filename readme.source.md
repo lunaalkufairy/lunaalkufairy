@@ -36,7 +36,7 @@
   <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:220,zIndex:10,gap:10}}>
     <div id="ht" style={{display:'flex',fontSize:38,fontWeight:800,color:'#d99d87',letterSpacing:'2px',lineHeight:1}}>Luna Alkufairy</div>
     <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.9)',letterSpacing:'2px'}}>Software Engineer &nbsp;|&nbsp; Flutter Developer</div>
-    <div style={{display:'flex',fontSize:12,color:'rgba(217,157,135,0.6)',letterSpacing:'1px'}}>Crafting cross-platform mobile apps · Open to freelance &amp; internships</div>
+    <div style={{display:'flex',fontSize:12,color:'rgba(217,157,135,0.6)',letterSpacing:'1px'}}>Crafting Cross-Platform Mobile Apps · Open to Freelance &amp; Internships</div>
   </div>
 
   <div style={{display:'flex',width:'80%',height:1,background:'rgba(68,33,40,0.5)',alignSelf:'center'}}/>
@@ -45,8 +45,8 @@
     <div style={{display:'flex',fontSize:11,color:'rgba(217,157,135,0.45)',letterSpacing:'4px'}}>— WHO AM I —</div>
     <div style={{display:'flex',flexDirection:'column',gap:6,alignItems:'center'}}>
       <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px'}}>A developer who genuinely loves what she builds.</div>
-      <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px'}}>I get excited learning something new every single day —</div>
-      <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px'}}>curiosity is not a phase for me, it's how I'm wired.</div>
+      <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px'}}>I get excited learning something new every single day.</div>
+      <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px'}}>Curiosity is not a phase for me, it's how I'm wired.</div>
       <div style={{display:'flex',fontSize:13,color:'rgba(217,157,135,0.45)',letterSpacing:'1.5px',marginTop:4}}>4th Year · Software Engineering · University of Damascus</div>
     </div>
   </div>
@@ -60,7 +60,7 @@
       {label:'Frameworks',    items:['Flutter','GetX','BLoC','Dio']},
       {label:'Databases',     items:['Firebase','SQLite']},
       {label:'Design & Tools',items:['GitHub','Git','VS Code','Visual Studio','Figma','Postman']},
-      {label:'Workspace',     items:['Windows']},
+      {label:'Workspaces',     items:['Windows']},
     ].map(function(row,i){
       return (
         <div key={i} style={{display:'flex',alignItems:'center',gap:14,width:'100%'}}>
