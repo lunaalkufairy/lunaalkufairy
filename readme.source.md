@@ -132,68 +132,6 @@
 </div>
 ```
 
-```aura width=860 height=260
-<div style={{
-  width:'100%', height:'100%', background:'#0d0810',
-  display:'flex', alignItems:'center', justifyContent:'center',
-  fontFamily:'Inter', position:'relative', overflow:'hidden',
-  borderRadius:16, 
-}}>
-  <style>{`
-    @keyframes s1 { 0%,100%{transform:translateX(0);opacity:.6} 50%{transform:translateX(220px);opacity:.85} }
-    @keyframes s2 { 0%,100%{transform:translateX(0);opacity:.5} 50%{transform:translateX(-190px);opacity:.8} }
-    @keyframes s3 { 0%,100%{opacity:.7} 50%{opacity:.35} }
-    #sb1{animation:s1 13s ease-in-out infinite} #sb2{animation:s2 10s ease-in-out infinite} #sb3{animation:s3 8s ease-in-out infinite}
-  `}</style>
-  <svg width="860" height="260" style={{position:'absolute',top:0,left:0}}>
-    <defs>
-      <radialGradient id="sg1" cx="50%" cy="50%" r="50%"><stop offset="0%" stopColor="rgba(80,18,35,0.75)"/><stop offset="100%" stopColor="rgba(80,18,35,0)"/></radialGradient>
-      <radialGradient id="sg2" cx="50%" cy="50%" r="50%"><stop offset="0%" stopColor="rgba(130,55,75,0.55)"/><stop offset="100%" stopColor="rgba(130,55,75,0)"/></radialGradient>
-      <radialGradient id="sg3" cx="50%" cy="50%" r="50%"><stop offset="0%" stopColor="rgba(217,157,135,0.18)"/><stop offset="100%" stopColor="rgba(217,157,135,0)"/></radialGradient>
-    </defs>
-    <ellipse id="sb1" cx="150" cy="250" rx="300" ry="160" fill="url(#sg1)"/>
-    <ellipse id="sb2" cx="680" cy="250" rx="270" ry="150" fill="url(#sg2)"/>
-    <ellipse id="sb3" cx="430" cy="130" rx="180" ry="100" fill="url(#sg3)"/>
-  </svg>
-  <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:20,zIndex:10,width:'100%',padding:'0 50px'}}>
-    <div style={{display:'flex',fontSize:11,color:'rgba(217,157,135,0.5)',letterSpacing:'4px'}}>— GITHUB STATS —</div>
-    <div style={{display:'flex',gap:30,justifyContent:'center',width:'100%'}}>
-      {[
-        {label:'Repositories', value: github?.repos?.length ?? '—'},
-        {label:'Followers',    value: github?.user?.followers ?? '—'},
-        {label:'Following',    value: github?.user?.following ?? '—'},
-        {label:'Stars',        value: github?.stats?.totalStars ?? '—'},
-      ].map(function(stat, i) {
-        return (
-          <div key={i} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:6}}>
-            <div style={{display:'flex',fontSize:28,fontWeight:800,color:'#d99d87',letterSpacing:'1px'}}>{stat.value}</div>
-            <div style={{display:'flex',fontSize:10,color:'rgba(123,98,97,0.7)',letterSpacing:'2px',textTransform:'uppercase'}}>{stat.label}</div>
-          </div>
-        );
-      })}
-    </div>
-    <div style={{display:'flex',width:'80%',height:1,background:'rgba(68,33,40,0.6)'}}/>
-    <div style={{display:'flex',flexDirection:'column',gap:10,width:'70%'}}>
-      {(function() {
-        var langs = (github?.languages ?? []).slice(0, 5);
-        return langs.map(function(lang, i) {
-          var pct = Math.round(lang.percentage ?? 0);
-          return (
-            <div key={i} style={{display:'flex',alignItems:'center',gap:12}}>
-              <div style={{display:'flex',fontSize:11,color:'rgba(153,145,137,0.8)',minWidth:70,letterSpacing:'1px'}}>{lang.name}</div>
-              <div style={{display:'flex',flex:1,height:4,background:'rgba(68,33,40,0.5)',borderRadius:2}}>
-                <div style={{display:'flex',width:pct+'%',height:'100%',background:'#d99d87',borderRadius:2,opacity:0.7}}/>
-              </div>
-              <div style={{display:'flex',fontSize:10,color:'rgba(123,98,97,0.7)',minWidth:35,justifyContent:'flex-end'}}>{pct}%</div>
-            </div>
-          );
-        });
-      })()}
-    </div>
-  </div>
-</div>
-```
-
 ```aura width=860 height=80
 <div style={{
   width:'100%', height:'100%',
