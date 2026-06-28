@@ -33,17 +33,14 @@
     <ellipse id="h5" cx="750" cy="700" rx="260" ry="220" fill="url(#g5)"/>
   </svg>
 
-  <!-- HEADER -->
   <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:220,zIndex:10,gap:10}}>
     <div id="ht" style={{display:'flex',fontSize:38,fontWeight:800,color:'#d99d87',letterSpacing:'2px',lineHeight:1}}>Luna Alkufairy</div>
     <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.9)',letterSpacing:'2px'}}>Software Engineer &nbsp;|&nbsp; Flutter Developer</div>
     <div style={{display:'flex',fontSize:12,color:'rgba(217,157,135,0.6)',letterSpacing:'1px'}}>Crafting cross-platform mobile apps · Open to freelance &amp; internships</div>
   </div>
 
-  <!-- DIVIDER -->
   <div style={{display:'flex',width:'80%',height:1,background:'rgba(68,33,40,0.5)',alignSelf:'center'}}/>
 
-  <!-- WHO AM I -->
   <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:200,zIndex:10,gap:12,padding:'0 60px'}}>
     <div style={{display:'flex',fontSize:11,color:'rgba(217,157,135,0.45)',letterSpacing:'4px'}}>— WHO AM I —</div>
     <div style={{display:'flex',flexDirection:'column',gap:6,alignItems:'center'}}>
@@ -54,10 +51,8 @@
     </div>
   </div>
 
-  <!-- DIVIDER -->
   <div style={{display:'flex',width:'80%',height:1,background:'rgba(68,33,40,0.5)',alignSelf:'center'}}/>
 
-  <!-- TECH STACK -->
   <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:310,zIndex:10,gap:14,padding:'0 50px'}}>
     <div style={{display:'flex',fontSize:11,color:'rgba(217,157,135,0.45)',letterSpacing:'4px'}}>— TECH STACK —</div>
     {[
@@ -83,7 +78,6 @@
     })}
   </div>
 
-  <!-- FOOTER -->
   <div style={{display:'flex',flex:1,alignItems:'flex-end',justifyContent:'center',paddingBottom:16,zIndex:10}}>
     <span style={{display:'flex',color:'rgba(123,98,97,0.4)',fontSize:11,letterSpacing:'3px'}}>lunaalkufairy · {new Date().getFullYear()}</span>
   </div>
