@@ -3,27 +3,6 @@
   width:'100%', height:'100%', background:'#0d0810',
   display:'flex', alignItems:'center', justifyContent:'center',
   fontFamily:'Inter', position:'relative', overflow:'hidden',
-  borderRadius:16,
-}}>
-  <div style={{display:'flex',flexDirection:'column',gap:8,padding:20,zIndex:10,overflow:'hidden'}}>
-    <div style={{display:'flex',fontSize:10,color:'#d99d87'}}>totalStars: {String(github?.totalStars ?? 'undefined')}</div>
-    <div style={{display:'flex',fontSize:10,color:'#d99d87'}}>publicRepos: {String(github?.user?.publicRepos ?? 'undefined')}</div>
-    <div style={{display:'flex',fontSize:10,color:'#d99d87'}}>followers: {String(github?.user?.followers ?? github?.user?.followers?.totalCount ?? 'undefined')}</div>
-    <div style={{display:'flex',fontSize:10,color:'#d99d87'}}>repos.length: {String(github?.repos?.length ?? 'undefined')}</div>
-    <div style={{display:'flex',fontSize:10,color:'#999189'}}>lang[0]: {JSON.stringify(github?.languages?.[0] ?? 'undefined')}</div>
-    <div style={{display:'flex',fontSize:10,color:'#999189'}}>lang[1]: {JSON.stringify(github?.languages?.[1] ?? 'undefined')}</div>
-    <div style={{display:'flex',fontSize:10,color:'#999189'}}>lang[2]: {JSON.stringify(github?.languages?.[2] ?? 'undefined')}</div>
-    <div style={{display:'flex',fontSize:10,color:'#7b6261'}}>github keys: {Object.keys(github ?? {}).join(', ')}</div>
-    <div style={{display:'flex',fontSize:10,color:'#7b6261'}}>user keys: {Object.keys(github?.user ?? {}).join(', ')}</div>
-  </div>
-</div>
-```
-
-```aura width=860 height=220
-<div style={{
-  width:'100%', height:'100%', background:'#0d0810',
-  display:'flex', alignItems:'center', justifyContent:'center',
-  fontFamily:'Inter', position:'relative', overflow:'hidden',
   borderRadius:16, 
 }}>
   <style>{`
@@ -180,10 +159,10 @@
     <div style={{display:'flex',fontSize:11,color:'rgba(217,157,135,0.5)',letterSpacing:'4px'}}>— GITHUB STATS —</div>
     <div style={{display:'flex',gap:30,justifyContent:'center',width:'100%'}}>
       {[
-        {label:'Repositories', value: github?.repos?.length ?? github?.user?.publicRepos ?? github?.user?.repositories?.totalCount ?? '—'},
-        {label:'Followers',    value: github?.user?.followers?.totalCount ?? github?.user?.followers ?? '—'},
-        {label:'Following',    value: github?.user?.following?.totalCount ?? github?.user?.following ?? '—'},
-        {label:'Stars',        value: github?.totalStars ?? github?.user?.starredRepositories?.totalCount ?? '—'},
+        {label:'Repositories', value: github?.repos?.length ?? '—'},
+        {label:'Followers',    value: github?.user?.followers ?? '—'},
+        {label:'Following',    value: github?.user?.following ?? '—'},
+        {label:'Stars',        value: github?.stats?.totalStars ?? '—'},
       ].map(function(stat, i) {
         return (
           <div key={i} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:6}}>
@@ -197,10 +176,8 @@
     <div style={{display:'flex',flexDirection:'column',gap:10,width:'70%'}}>
       {(function() {
         var langs = (github?.languages ?? []).slice(0, 5);
-        var total = langs.reduce(function(s, l) { return s + (parseInt(l.size) || parseInt(l.bytes) || 1); }, 0);
         return langs.map(function(lang, i) {
-          var size = parseInt(lang.size) || parseInt(lang.bytes) || 0;
-          var pct = total > langs.length ? Math.round(size / total * 100) : Math.round(100 / langs.length);
+          var pct = Math.round(lang.percentage ?? 0);
           return (
             <div key={i} style={{display:'flex',alignItems:'center',gap:12}}>
               <div style={{display:'flex',fontSize:11,color:'rgba(153,145,137,0.8)',minWidth:70,letterSpacing:'1px'}}>{lang.name}</div>
