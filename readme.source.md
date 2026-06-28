@@ -3,7 +3,7 @@
   width:'100%', height:'100%', background:'#0d0810',
   display:'flex', alignItems:'center', justifyContent:'center',
   fontFamily:'Inter', position:'relative', overflow:'hidden',
-  borderRadius:16, border:'1px solid rgba(68,33,40,0.6)'
+  borderRadius:16,
 }}>
   <style>{`
     @keyframes d1 { 0%,100%{transform:translateX(0);opacity:.85} 50%{transform:translateX(280px);opacity:1} }
@@ -37,7 +37,7 @@
   <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:10,zIndex:10}}>
     <div id="ht" style={{display:'flex',fontSize:38,fontWeight:800,color:'#d99d87',letterSpacing:'2px',lineHeight:1}}>Luna Alkufairy</div>
     <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.9)',letterSpacing:'2px'}}>Software Engineer &nbsp;|&nbsp; Flutter Developer</div>
-    <div style={{display:'flex',fontSize:12,marginTop:2,color:'rgba(217,157,135,0.6)',letterSpacing:'1px'}}>Crafting Cross-Platform Mobile Apps · Open to Freelance &amp; Internships</div>
+    <div style={{display:'flex',fontSize:12,marginTop:2,color:'rgba(217,157,135,0.6)',letterSpacing:'1px'}}>Crafting cross-platform mobile apps · Open to freelance &amp; internships</div>
   </div>
 </div>
 ```
@@ -47,7 +47,7 @@
   width:'100%', height:'100%', background:'#0d0810',
   display:'flex', alignItems:'center', justifyContent:'center',
   fontFamily:'Inter', position:'relative', overflow:'hidden',
-  borderRadius:16, border:'1px solid rgba(68,33,40,0.5)'
+  borderRadius:16,
 }}>
   <style>{`
     @keyframes a1 { 0%,100%{transform:translateX(0);opacity:.6} 50%{transform:translateX(200px);opacity:.9} }
@@ -69,8 +69,8 @@
     <div style={{display:'flex',fontSize:11,color:'rgba(217,157,135,0.5)',letterSpacing:'4px',textTransform:'uppercase'}}>— Who Am I —</div>
     <div style={{display:'flex',flexDirection:'column',gap:6,alignItems:'center'}}>
       <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px',lineHeight:1.7}}>A developer who genuinely loves what she builds.</div>
-      <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px',lineHeight:1.7}}>I get excited learning something new every single day.</div>
-      <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px',lineHeight:1.7}}>Curiosity is not a phase for me, it's how I'm wired.</div>
+      <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px',lineHeight:1.7}}>I get excited learning something new every single day —</div>
+      <div style={{display:'flex',fontSize:14,color:'rgba(153,145,137,0.85)',letterSpacing:'0.5px',lineHeight:1.7}}>curiosity is not a phase for me, it's how I'm wired.</div>
       <div style={{display:'flex',fontSize:13,color:'rgba(217,157,135,0.5)',letterSpacing:'1.5px',marginTop:6}}>4th Year · Software Engineering · University of Damascus</div>
     </div>
   </div>
@@ -82,7 +82,7 @@
   width:'100%', height:'100%', background:'#0d0810',
   display:'flex', alignItems:'center', justifyContent:'center',
   fontFamily:'Inter', position:'relative', overflow:'hidden',
-  borderRadius:16, border:'1px solid rgba(68,33,40,0.5)'
+  borderRadius:16,
 }}>
   <style>{`
     @keyframes t1 { 0%,100%{transform:translateX(0);opacity:.65} 50%{transform:translateX(240px);opacity:.9} }
@@ -107,7 +107,7 @@
       {label:'Frameworks', items:['Flutter','GetX','BLoC','Dio']},
       {label:'Databases', items:['Firebase','SQLite']},
       {label:'Design & Tools', items:['GitHub','Git','VS Code','Visual Studio','Figma','Postman']},
-      {label:'Workspaces', items:['Windows']},
+      {label:'Workspace', items:['Windows']},
     ].map(function(row, i) {
       return (
         <div key={i} style={{display:'flex',alignItems:'center',gap:16,width:'100%'}}>
@@ -137,7 +137,7 @@
   width:'100%', height:'100%', background:'#0d0810',
   display:'flex', alignItems:'center', justifyContent:'center',
   fontFamily:'Inter', position:'relative', overflow:'hidden',
-  borderRadius:16, border:'1px solid rgba(68,33,40,0.5)'
+  borderRadius:16,
 }}>
   <style>{`
     @keyframes s1 { 0%,100%{transform:translateX(0);opacity:.6} 50%{transform:translateX(220px);opacity:.85} }
