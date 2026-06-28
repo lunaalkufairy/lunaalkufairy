@@ -159,10 +159,10 @@
     <div style={{display:'flex',fontSize:11,color:'rgba(217,157,135,0.5)',letterSpacing:'4px'}}>— GITHUB STATS —</div>
     <div style={{display:'flex',gap:30,justifyContent:'center',width:'100%'}}>
       {[
-        {label:'Repositories', value: github?.user?.repositories?.totalCount ?? github?.user?.publicRepos ?? '—'},
+        {label:'Repositories', value: github?.user?.publicRepos ?? github?.user?.repositories?.totalCount ?? '—'},
         {label:'Followers',    value: github?.user?.followers?.totalCount ?? github?.user?.followers ?? '—'},
         {label:'Following',    value: github?.user?.following?.totalCount ?? github?.user?.following ?? '—'},
-        {label:'Stars',        value: github?.user?.starredRepositories?.totalCount ?? '—'},
+        {label:'Stars',        value: github?.user?.starredRepositories?.totalCount ?? github?.totalStars ?? '—'},
       ].map(function(stat, i) {
         return (
           <div key={i} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:6}}>
@@ -174,17 +174,22 @@
     </div>
     <div style={{display:'flex',width:'80%',height:1,background:'rgba(68,33,40,0.6)'}}/>
     <div style={{display:'flex',flexDirection:'column',gap:10,width:'70%'}}>
-      {((github?.languages ?? []).slice(0,5)).map(function(lang, i) {
-        return (
-          <div key={i} style={{display:'flex',alignItems:'center',gap:12}}>
-            <div style={{display:'flex',fontSize:11,color:'rgba(153,145,137,0.8)',minWidth:70,letterSpacing:'1px'}}>{lang.name}</div>
-            <div style={{display:'flex',flex:1,height:4,background:'rgba(68,33,40,0.5)',borderRadius:2}}>
-              <div style={{display:'flex',width:(lang.percent ?? 0)+'%',height:'100%',background:'#d99d87',borderRadius:2,opacity:0.7}}/>
+      {(function() {
+        var langs = (github?.languages ?? []).slice(0, 5);
+        var total = langs.reduce(function(s, l) { return s + (l.size ?? 1); }, 0);
+        return langs.map(function(lang, i) {
+          var pct = total > 0 ? Math.round((lang.size ?? 0) / total * 100) : 0;
+          return (
+            <div key={i} style={{display:'flex',alignItems:'center',gap:12}}>
+              <div style={{display:'flex',fontSize:11,color:'rgba(153,145,137,0.8)',minWidth:70,letterSpacing:'1px'}}>{lang.name}</div>
+              <div style={{display:'flex',flex:1,height:4,background:'rgba(68,33,40,0.5)',borderRadius:2}}>
+                <div style={{display:'flex',width:pct+'%',height:'100%',background:'#d99d87',borderRadius:2,opacity:0.7}}/>
+              </div>
+              <div style={{display:'flex',fontSize:10,color:'rgba(123,98,97,0.7)',minWidth:35,justifyContent:'flex-end'}}>{pct}%</div>
             </div>
-            <div style={{display:'flex',fontSize:10,color:'rgba(123,98,97,0.7)',minWidth:35,justifyContent:'flex-end'}}>{Math.round(lang.percent ?? 0)}%</div>
-          </div>
-        );
-      })}
+          );
+        });
+      })()}
     </div>
   </div>
 </div>
